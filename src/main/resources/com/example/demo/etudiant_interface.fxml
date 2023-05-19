@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.EtudiantContolor">
+    <children>
+        <GridPane layoutX="34.0" layoutY="66.0" prefHeight="148.0" prefWidth="451.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.199951171875" minWidth="10.0" prefWidth="63.39996337890625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.60003662109375" minWidth="10.0" prefWidth="187.40001220703124" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.60001220703123" minWidth="10.0" prefWidth="67.60001220703123" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.99997558593748" minWidth="0.0" prefWidth="43.00001220703126" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.40004882812502" minWidth="10.0" prefWidth="92.59998779296876" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="68.00000610351563" minHeight="10.0" prefHeight="57.599981689453124" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="79.19998779296876" minHeight="10.0" prefHeight="68.00001831054686" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Nom :">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Prénom :" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="tfName" GridPane.columnIndex="1" />
+                <TextField fx:id="tfLastName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Sexe :" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="filiere :" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <ComboBox fx:id="combo" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Group fx:id="groupRadio" GridPane.columnIndex="4">
+                    <children>
+                        <RadioButton fx:id="radioF" mnemonicParsing="false" prefHeight="31.0" prefWidth="99.0" text="F" />
+                        <RadioButton fx:id="radioM" layoutX="51.0" layoutY="5.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="95.0" text="M" />
+                    </children>
+                </Group>
+            </children>
+        </GridPane>
+        <Label layoutX="34.0" layoutY="27.0" text="Informations Etudiant">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <VBox layoutX="511.0" layoutY="76.0" prefHeight="128.0" prefWidth="75.0">
+            <children>
+                <Button fx:id="addEtd" mnemonicParsing="false" onAction="#addEtd" text="Ajouter">
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="delete" mnemonicParsing="false" text="Supprimer">
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="edit" mnemonicParsing="false" text="Modifier" />
+            </children>
+        </VBox>
+        <Label layoutX="34.0" layoutY="214.0" text="Liste des Etudiants">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <TableView fx:id="table" layoutX="34.0" layoutY="244.0" prefHeight="142.0" prefWidth="537.0">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="111.20001220703125" text="Id" />
+                <TableColumn fx:id="nameCol" prefWidth="109.5999755859375" text="nom" />
+                <TableColumn fx:id="lastNameCol" prefWidth="104.7999267578125" text="prénom" />
+                <TableColumn fx:id="sexeCol" prefWidth="99.99993896484375" text="Sexe" />
+                <TableColumn fx:id="filiereCol" prefWidth="111.20001220703125" text="filiere :" />
+            </columns>
+        </TableView>
+    </children>
+</Pane>
