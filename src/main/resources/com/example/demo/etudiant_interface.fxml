@@ -80,12 +80,12 @@
                         <Insets bottom="15.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="delete" mnemonicParsing="false" text="Supprimer">
+                <Button fx:id="delete" onAction="#delEtd" mnemonicParsing="false" text="Supprimer">
                     <VBox.margin>
                         <Insets bottom="15.0" />
                     </VBox.margin>
                 </Button>
-                <Button fx:id="edit" mnemonicParsing="false" text="Modifier" />
+                <Button fx:id="edit" onAction="#editer" mnemonicParsing="false" text="Modifier" />
             </children>
         </VBox>
         <Label layoutX="34.0" layoutY="214.0" text="Liste des Etudiants">

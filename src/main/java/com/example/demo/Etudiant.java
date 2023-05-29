@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Etudiant {
@@ -9,17 +10,25 @@ public class Etudiant {
     private SimpleStringProperty prenom;
     private SimpleStringProperty sex;
 
-    public ObservableList<Etudiant> getList() {
-        return list;
+    private ObservableList<Etudiant> etudiantList;
+
+    public Etudiant() {
+        etudiantList = FXCollections.observableArrayList();
     }
 
-    public void setList(ObservableList<Etudiant> list) {
-        this.list = list;
+    public void setEtudiantList(ObservableList<Etudiant> etudiantList) {
+        this.etudiantList = etudiantList;
     }
+
+    public ObservableList<Etudiant> getList() {
+        return etudiantList;
+    }
+
+
 
     private SimpleStringProperty filiere;
 
-    ObservableList<Etudiant> list;
+
 
 
 
